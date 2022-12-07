@@ -19,6 +19,6 @@ spec:
         imagePullPolicy: IfNotPresent
         name: app-kub
         ports:
-        - containerPort: 8080
+        - containerPort: 8080 
 
 
