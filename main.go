@@ -12,11 +12,11 @@ var env = configs.Envload()
 var R = gin.Default()
 
 func init() {
-	configs.ConnectDB()
+	// configs.ConnectDB()
 }
 func main() {
 	routes.Routes(R)
-	configs.ConnectDB()
+
 	fmt.Println("eee", env.Port)
 	R.Run(env.Port)
 }

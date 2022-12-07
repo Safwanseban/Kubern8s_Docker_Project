@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: app-test
+  labels:
+    app: app-testing
+spec:
+  selector:
+    matchLabels:
+      app: app-testing
+  template:
+    metadata:
+      name: app-test
+      labels:
+        app: app-testing
+    spec:
+      containers:
+      - image: safwanseban/k8stesting:1.1.1
+        imagePullPolicy: IfNotPresent
+        name: app-kub
+        ports:
+        - containerPort: 8080
+
+
