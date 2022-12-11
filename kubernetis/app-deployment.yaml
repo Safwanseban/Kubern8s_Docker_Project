@@ -15,10 +15,13 @@ spec:
         app: app-testing
     spec:
       containers:
-      - image: safwanseban/k8stesting:1.1.1
+      - image: safwanseban/k8stesting:3.0.0
         imagePullPolicy: IfNotPresent
         name: app-kub
         ports:
         - containerPort: 8080 
+        envFrom:
+          - secretRef:
+              name: postgres-secret
 
 
